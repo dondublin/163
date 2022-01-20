@@ -1,0 +1,72 @@
+var PopConfig = window.PopConfig = [
+    {
+        'name': '网易邮箱官方App', 
+        'className': 'mailApp-logo-default',
+        'link': 'https://mail.163.com/dashi/dlpro.html?from=mail92',
+        'tjName': 'b_login_box_logo-mailmaster_dl_click',
+        'remark': '立即下载',
+        'picUrl': 'https://onegoods.nosdn.127.net/resupload/2019/6/4/55dcb603c768222522d88de104b37a63.png',
+        'validDomain': '163,126,yeah'
+    },
+    {
+        'name': '升级VIP，安全性能提升30%', 
+        'className': 'mailApp-logo-default',
+        'link': 'https://reg.vip.163.com/register.m?from=anquan',
+        'tjName': 'b_login_box_logo-default_click',
+        'remark': '立即升级',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-7.png',
+        'validDomain': '163,126,yeah'
+    }, {
+        'name': '升级邮箱PLUS，去广告',
+        'className': 'mailApp-logo-1',
+        'link': 'https://v.mail.163.com/?utm_source=maillogin&utm_medium=quguanggao',
+        'tjName': 'b_login_box_logo-1_click',
+        'remark': '立即升级',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-8.png',
+        'validDomain': '163,126,yeah'
+    }, {
+        'name': '会员特权，恢复误删邮件',
+        'className': 'mailApp-logo-3',
+        'link': 'https://v.mail.163.com/?utm_source=maillogin&utm_medium=quguanggao',
+        'tjName': 'b_login_box_logo-3_click',
+        'remark': '升级会员',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-9.png',
+        'validDomain': '163,126'
+    }, {
+        'name': '邮箱PLUS新版上线',
+        'className': 'mailApp-logo-4',
+        'link': 'https://v.mail.163.com/?utm_source=163logingzy',
+        'tjName': 'b_login_box_logo-4_click',
+        'remark': '升级服务',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-10.png',
+        'validDomain': '163,126'
+    },
+    {
+        'name': '无限容量，使用无忧',
+        'className': 'mailApp-logo-6',
+        'link': 'https://reg.vip.163.com/register.m?from=ursdenglu',
+        'tjName': 'b_login_box_logo-6_click',
+        'remark': '升级VIP邮箱',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-11.png',
+        'validDomain': '163,126'
+    },
+    {
+        'name': 'VIP单词群发400封，效率提升',
+        'className': 'mailApp-logo-7',
+        'link': 'https://reg.vip.163.com/register.m?from=hd_card',
+        'tjName': 'b_login_box_logo-7_click',
+        'remark': '开通',
+        'picUrl': 'https://mimg.127.net/ggimg/all/img21/mail-index-bottom-gg-12.png',
+        'validDomain': '163,126'
+    }
+];
+
+window.Notice = [
+    {
+        title: '公告：网盘服务维护升级！',
+        url: 'https://mail.163.com/html/190612-netdisc-upgrade/',
+        start: new Date(2019,5,12,18,0).getTime(),
+        end: new Date(2019,5,12,22,05).getTime(),
+        domain: '163,126,yeah'
+    }
+];

